@@ -133,10 +133,18 @@ console.log('Desi Code');*/
 
 /*--------------------------------------------------- Stream ----------------------------------------------*/
 
-var fs = require('fs');
+/*var fs = require('fs');
 
 var file = fs.createReadStream(__dirname + '/lorem.txt', {encoding:'utf8'});
 file.on('data', function(chunk){
 	console.log(chunk.length);
 });
-console.log('Lorem ipsum dolor sit amet amet');
+console.log('Lorem ipsum dolor sit amet amet');*/
+
+/*--------------------------------------------------- Web Server ----------------------------------------*/
+
+var http = require('http');
+http.createServer(function(req, res){
+	res.writeHead(200, {'Content-Type':'text/plain'});
+	res.end('Hello Worldwa\n');
+}).listen(3000, '127.0.0.1');
